@@ -7,3 +7,12 @@
     text-align: 15px;
 
 }
+
+.btn-danger {
+    color: ghostwhite;
+    background-color: rgb(236, 120, 12);
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
