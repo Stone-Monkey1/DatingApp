@@ -1,0 +1,8 @@
+.btn-info {
+    background-color: rgba(0, 183, 255, 0.836);
+    
+}
+
+.btn-info:hover {
+    background-color: darkblue;
+}
