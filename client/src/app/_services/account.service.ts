@@ -32,8 +32,8 @@ export class AccountService {
     return this.http.post(this.baseUrl + 'account/register', model).pipe(
       map((user: User) => {
         if (user) {
-          this.setCurrentUser(user);
-          this.presence.createHubConnection(user);
+         this.setCurrentUser(user);
+         this.presence.createHubConnection(user);
         }
       })
     )
@@ -54,6 +54,6 @@ export class AccountService {
   }
 
   getDecodedToken(token) {
-    return JSON.parse(atob(token.split('.')[1]))
+    return JSON.parse(atob(token.split('.')[1]));
   }
 }

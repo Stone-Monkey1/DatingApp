@@ -42,6 +42,14 @@ namespace API.Data
             return await _context.Connections.FindAsync(connectionId);
         }
 
+        public async Task<Group> GetGroupForConnection(string connectionId)
+        {
+            return await _context.Groups
+                .Include(c => c.Connections)
+                .Where(c => c.Connections.Any(x => x.ConnectionId == connectionId))
+                .FirstOrDefaultAsync();
+        }
+
         public async Task<Message> GetMessage(int id)
         {
             return await _context.Messages
@@ -76,6 +84,7 @@ namespace API.Data
             var messages = query.ProjectTo<MessageDto>(_mapper.ConfigurationProvider);
 
             return await PagedList<MessageDto>.CreateAsync(messages, messageParams.PageNumber, messageParams.PageSize);
+
         }
 
         public async Task<IEnumerable<MessageDto>> GetMessageThread(string currentUsername, 
