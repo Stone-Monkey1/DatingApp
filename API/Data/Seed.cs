@@ -1,10 +1,3 @@
-using System.Collections.Generic;
-using System.Text.Json;
-using System.Threading.Tasks;
-using API.Entities;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-
 namespace API.Data
 {
     public class Seed

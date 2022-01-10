@@ -20,3 +20,5 @@ global using API.DTOs;
 global using API.Interfaces;
 global using AutoMapper;
 global using System.ComponentModel.DataAnnotations;
+global using Microsoft.AspNetCore.Authorization;
+global using System.Text.Json;
