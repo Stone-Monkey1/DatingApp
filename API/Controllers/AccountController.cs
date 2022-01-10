@@ -1,20 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using API.Data;
-using API.Entities;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Security.Cryptography;
-using System.Text;
-using API.DTOs;
-using Microsoft.EntityFrameworkCore;
-using API.Interfaces;
-using AutoMapper;
-using Microsoft.AspNetCore.Identity;
-
 namespace API.Controllers
 {
     public class AccountController : BaseApiController
